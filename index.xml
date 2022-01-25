@@ -28,41 +28,41 @@
 &lt;ol>
 &lt;li>打开 WSL，进入系统中。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://gitee.com/quanuanc/PicGo-IMG/raw/master/image-20200207235224938.png" alt="image-20200207235224938">&lt;/p>
+&lt;p>&lt;img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/image-20200207235224938.png" alt="image-20200207235224938">&lt;/p>
 &lt;ol start="2">
 &lt;li>
 &lt;p>建立 projects 文件夹，然后再建立 helloworld 子文件夹&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mkdir projects
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mkdir projects
 &lt;span style="color:#8be9fd;font-style:italic">cd&lt;/span> projects
 mkdir helloworld
 &lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;li>
 &lt;p>安装编译和调试工具。在 Ubuntu 中安装只需要执行以下命令即可&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo apt-get update
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo apt-get update
 sudo apt-get install build-essential gdb
 &lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;li>
 &lt;p>确认以上工具是否已经安装成功&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">whereis g++
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">whereis g++
 whereis gdb
 &lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;/ol>
 &lt;h1 id="使用-vs-code-连接到-wsl">使用 VS Code 连接到 WSL&lt;/h1>
 &lt;p>在 VS Code 连接到 WSL，打开 helloworld 文件夹。&lt;/p>
-&lt;p>&lt;img src="https://gitee.com/quanuanc/PicGo-IMG/raw/master/image-20200209092920677.png" alt="image-20200209092920677">&lt;/p>
+&lt;p>&lt;img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/image-20200209092920677.png" alt="image-20200209092920677">&lt;/p>
 &lt;p>你也可以在左下角状态栏看到连接状态。&lt;/p>
-&lt;p>&lt;img src="https://gitee.com/quanuanc/PicGo-IMG/raw/master/image-20200209093241854.png" alt="image-20200209093241854">&lt;/p>
+&lt;p>&lt;img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/image-20200209093241854.png" alt="image-20200209093241854">&lt;/p>
 &lt;p>如果你点击状态栏的 &lt;strong>WSL: Ubuntu&lt;/strong>，你会看到一个下拉选单。点击 &lt;strong>Close Remote Connection&lt;/strong> 就可以断开与 WSL 的连接。&lt;/p>
-&lt;p>&lt;img src="https://gitee.com/quanuanc/PicGo-IMG/raw/master/image-20200209093649678.png" alt="image-20200209093649678">&lt;/p>
+&lt;p>&lt;img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/image-20200209093649678.png" alt="image-20200209093649678">&lt;/p>
 &lt;h1 id="添加源码文件">添加源码文件&lt;/h1>
 &lt;p>在文件管理器标题栏中，点击 &lt;strong>New File&lt;/strong> 按钮，并把文件命名为：helloworld.cpp。&lt;/p>
-&lt;p>&lt;img src="https://gitee.com/quanuanc/PicGo-IMG/raw/master/new-file-button.png" alt="New File title bar button">&lt;/p>
+&lt;p>&lt;img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/new-file-button.png" alt="New File title bar button">&lt;/p>
 &lt;h2 id="安装-cc-扩展">安装 C/C++ 扩展&lt;/h2>
 &lt;p>如果你还没安装 &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">Microsoft C/C++ extension&lt;/a> 扩展，VS Code 会提示你安装。&lt;/p>
-&lt;p>&lt;img src="https://gitee.com/quanuanc/PicGo-IMG/raw/master/cpp-extension-notification.png" alt="C++ extension notification">&lt;/p>
+&lt;p>&lt;img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/cpp-extension-notification.png" alt="C++ extension notification">&lt;/p>
 &lt;h2 id="输入源代码">输入源代码&lt;/h2>
 &lt;p>输入你的 C++ 代码并保存。&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-c++" data-lang="c++">&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;lt;iostream&amp;gt;&lt;/span>&lt;span style="color:#ff79c6">
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-c++" data-lang="c++">&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;lt;iostream&amp;gt;&lt;/span>&lt;span style="color:#ff79c6">
 &lt;/span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;lt;vector&amp;gt;&lt;/span>&lt;span style="color:#ff79c6">
 &lt;/span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;lt;string&amp;gt;&lt;/span>&lt;span style="color:#ff79c6">
 &lt;/span>&lt;span style="color:#ff79c6">&lt;/span>
@@ -78,9 +78,9 @@ cout &lt;span style="color:#ff79c6">&amp;lt;&amp;lt;&lt;/span> endl;
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="编译源码">编译源码&lt;/h1>
 &lt;p>创建一个 task.json 文件，告诉 VS Code 如何编译这个程序。&lt;/p>
-&lt;p>在标题栏中选择 &lt;strong>Terminal &amp;gt; Configure Default Build Task.&lt;/strong> 在下拉栏中，选择 &lt;strong>g++ build active file.&lt;/strong> &lt;img src="https://gitee.com/quanuanc/PicGo-IMG/raw/master/build-active-file.png" alt="Tasks C++ build dropdown">&lt;/p>
+&lt;p>在标题栏中选择 &lt;strong>Terminal &amp;gt; Configure Default Build Task.&lt;/strong> 在下拉栏中，选择 &lt;strong>g++ build active file.&lt;/strong> &lt;img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/build-active-file.png" alt="Tasks C++ build dropdown">&lt;/p>
 &lt;p>选择这个命令会在 &lt;strong>.vscode&lt;/strong> 文件夹中创建 &lt;strong>task.json&lt;/strong> 文件，它的内容如下：&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
 &lt;span style="color:#ff79c6">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#f1fa8c">&amp;#34;2.0.0&amp;#34;&lt;/span>,
 &lt;span style="color:#ff79c6">&amp;#34;tasks&amp;#34;&lt;/span>: [
 {
@@ -111,7 +111,7 @@ cout &lt;span style="color:#ff79c6">&amp;lt;&amp;lt;&lt;/span> endl;
 &lt;p>编译任务开始后，可以在终端界面中看到输出信息&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://gitee.com/quanuanc/PicGo-IMG/raw/master/wsl-task-in-terminal.png" alt="G++ build output in terminal">&lt;/p>
+&lt;p>&lt;img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/wsl-task-in-terminal.png" alt="G++ build output in terminal">&lt;/p>
 &lt;ol start="4">
 &lt;li>在终端中输入 ./helloworld 即可运行程序&lt;/li>
 &lt;/ol>
@@ -119,7 +119,7 @@ cout &lt;span style="color:#ff79c6">&amp;lt;&amp;lt;&lt;/span> endl;
 &lt;p>下一步，你会创建一个 launch.json，用以配置 VS Code 如何调用 GDB 调试器来调试程序。选择 &lt;strong>Debug &amp;gt; Add Configuration&amp;hellip;&lt;/strong> 然后选择 &lt;strong>C++ (GDB/LLDB)&lt;/strong>。&lt;/p>
 &lt;p>在下拉栏中选择 &lt;strong>g++ build and debug active file&lt;/strong>。&lt;/p>
 &lt;p>VS Code 会创建一个 launch.json 文件，内容如下：&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
 &lt;span style="color:#ff79c6">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#f1fa8c">&amp;#34;0.2.0&amp;#34;&lt;/span>,
 &lt;span style="color:#ff79c6">&amp;#34;configurations&amp;#34;&lt;/span>: [
 {
@@ -154,12 +154,12 @@ cout &lt;span style="color:#ff79c6">&amp;lt;&amp;lt;&lt;/span> endl;
 &lt;li>集成的终端会出现在编辑区的下方。在 &lt;strong>Debug Output&lt;/strong> 标签页中，你可以看到代码的输出，这表明调试器已经启动并运行。&lt;/li>
 &lt;li>编辑器中高亮显示了 &lt;code>main&lt;/code> 方法的第一行语句。这是 C++ 扩展自动为你设定的断点。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://gitee.com/quanuanc/PicGo-IMG/raw/master/wsl-breakpoint-default.png" alt="Initial breakpoint">&lt;/p>
+&lt;p>&lt;img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/wsl-breakpoint-default.png" alt="Initial breakpoint">&lt;/p>
 &lt;ul>
 &lt;li>左侧的 &lt;strong>Run&lt;/strong> 视图显示调试信息。&lt;/li>
 &lt;li>在代码编辑器的顶部，将显示一个调试控制面板。您可以通过按住左侧的点在屏幕上移动它。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://gitee.com/quanuanc/PicGo-IMG/raw/master/debug-controls.png" alt="debug-control">&lt;/p>
+&lt;p>&lt;img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/debug-controls.png" alt="debug-control">&lt;/p>
 &lt;h1 id="关闭">关闭&lt;/h1>
 &lt;p>当您在 WSL 中完成工作后，可以使用 &lt;strong>File&lt;/strong> 菜单中的 &lt;strong>Close Remote Connection&lt;/strong> 命令和快捷键（Ctrl+Shift+P）关闭远程会话。 这将重新启动本地运行的 VS Code。您可以在 &lt;strong>File&lt;/strong> &amp;gt; &lt;strong>Open Recent&lt;/strong> 中选择带有 &lt;strong>[WSL]&lt;/strong> 后缀的文件夹来重新打开 WSL 会话。&lt;/p>
 - https://quanuanc.github.io/posts/vscode-wsl-cpp/ - Quanuanc</description></item></channel></rss>
