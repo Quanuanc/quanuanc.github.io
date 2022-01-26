@@ -4,12 +4,12 @@
         <loc>https://quanuanc.github.io/</loc>
     </url>
     <url>
-        <loc>https://quanuanc.github.io/borrow-money/</loc>
-        <lastmod>2021-02-04</lastmod>
-    </url>
-    <url>
         <loc>https://quanuanc.github.io/hello-world/</loc>
         <lastmod>2020-01-01</lastmod>
+    </url>
+    <url>
+        <loc>https://quanuanc.github.io/v2ex-borrow-money/</loc>
+        <lastmod>2021-02-04</lastmod>
     </url>
     <url>
         <loc>https://quanuanc.github.io/vscode-wsl-cpp/</loc>
