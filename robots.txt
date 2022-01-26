@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://quanuanc.github.io/sitemap.xml

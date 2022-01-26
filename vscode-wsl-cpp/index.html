@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http_equiv="x-ua-compatible" content="id-edge">
+    <title>[译] 使用 VS Code 和 WSL 搭建 C++ 开发环境</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href='https://quanuanc.github.io/main.css'>
+</head>
+
+  <body>
+    <div class="page-content" id="article">
+      <div class="wrapper">
+        
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">[译] 使用 VS Code 和 WSL 搭建 C++ 开发环境</h1>
+    <p class="post-meta">
+        <span><svg width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><path d="M2.06 6.69c.14-.4.5-.69.94-.69h11V5c0-.55-.45-1-1-1H6.41l-1.7-1.71A.997.997 0 0 0 4 2H1c-.55 0-1 .45-1 1v9.84l2.05-6.15h.01zM16 8c0-.55-.45-1-1-1H4a.99.99 0 0 0-.94.69l-2 6c-.04.09-.06.2-.06.31 0 .55.45 1 1 1h11c.44 0 .81-.29.94-.69l2-6c.04-.09.06-.2.06-.31z"></path></svg>
+        <time datetime="2020-02-07" itemprop="datePublished">Feb 7, 2020</time></span>
+        <a href="/"><span><svg width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><path d="M1 3h14c.55 0 1-.45 1-1s-.45-1-1-1H1c-.55 0-1 .45-1 1s.45 1 1 1zm14 10H1c-.55 0-1 .45-1 1s.45 1 1 1h14c.55 0 1-.45 1-1s-.45-1-1-1zm0-4H1c-.55 0-1 .45-1 1s.45 1 1 1h14c.55 0 1-.45 1-1s-.45-1-1-1zm0-4H1c-.55 0-1 .45-1 1s.45 1 1 1h14c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg>Home</span></a>
+    </p>
+</header>
+    <div class="post-content" itemtype="articleBody">
+        <h3 id="yi-zhe-xu">译者序</h3>
+<p>本文翻译自 Visual Studio Code 官方说明文档 <a href="https://code.visualstudio.com/docs/cpp/config-wsl">Using C++ and WSL in VS Code</a> </p>
+<p><strong>本文根据原文内容意译，而非逐词逐句翻译，如需了解更多，推荐阅读原文</strong></p>
+<hr />
+<p>在本教程中，你将配置 Visual Studio Code，在 Windows Linux 子系统（WSL） Ubuntu 中使用 GCC C++编译器（g++）和 GDB 调试器。GCC 代表了 GNU 编译器集合，GDB 是 GNU 调试器。WSL 是 Windows 中的 Linux 环境，它直接运行在计算机硬件上，而非虚拟机中。</p>
+<blockquote>
+<p>Note:  本教程的大部分内容适用于直接在 Linux 机器上使用 C++ 和 VS Code。</p>
+</blockquote>
+<h1 id="xian-jue-tiao-jian">先决条件</h1>
+<ol>
+<li>安装 <a href="https://code.visualstudio.com/download">Visual Studio Code</a>（译者注：推荐下载 Zip 版本，开启 <a href="https://code.visualstudio.com/docs/editor/portable">便携模式</a>）</li>
+<li>安装 <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote - WSL 扩展</a></li>
+<li>安装 WSL，可以按照个人习惯选择 Linux 发行版。本文使用 <a href="https://www.microsoft.com/store/productId/9NBLGGH4MSV6">Ubuntu</a></li>
+</ol>
+<h1 id="she-zhi-linux-huan-jing">设置 Linux 环境</h1>
+<ol>
+<li>打开 WSL，进入系统中。</li>
+</ol>
+<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/image-20200207235224938.png" alt="image-20200207235224938" /></p>
+<ol start="2">
+<li>
+<p>建立 projects 文件夹，然后再建立 helloworld 子文件夹</p>
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">mkdir projects
+cd projects
+mkdir helloworld
+</code></pre>
+</li>
+<li>
+<p>安装编译和调试工具。在 Ubuntu 中安装只需要执行以下命令即可</p>
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">sudo apt-get update
+sudo apt-get install build-essential gdb
+</code></pre>
+</li>
+<li>
+<p>确认以上工具是否已经安装成功</p>
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">whereis g++
+whereis gdb
+</code></pre>
+</li>
+</ol>
+<h1 id="shi-yong-vs-code-lian-jie-dao-wsl">使用 VS Code 连接到 WSL</h1>
+<p>在 VS Code 连接到 WSL，打开 helloworld 文件夹。</p>
+<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/image-20200209092920677.png" alt="image-20200209092920677" /></p>
+<p>你也可以在左下角状态栏看到连接状态。</p>
+<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/image-20200209093241854.png" alt="image-20200209093241854" /></p>
+<p>如果你点击状态栏的 <strong>WSL: Ubuntu</strong>，你会看到一个下拉选单。点击 <strong>Close Remote Connection</strong> 就可以断开与 WSL 的连接。</p>
+<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/image-20200209093649678.png" alt="image-20200209093649678" /></p>
+<h1 id="tian-jia-yuan-ma-wen-jian">添加源码文件</h1>
+<p>在文件管理器标题栏中，点击 <strong>New File</strong> 按钮，并把文件命名为：helloworld.cpp。</p>
+<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/new-file-button.png" alt="New File title bar button" /></p>
+<h2 id="an-zhuang-c-c-kuo-zhan">安装 C/C++ 扩展</h2>
+<p>如果你还没安装  <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">Microsoft C/C++ extension</a> 扩展，VS Code 会提示你安装。</p>
+<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/cpp-extension-notification.png" alt="C++ extension notification" /></p>
+<h2 id="shu-ru-yuan-dai-ma">输入源代码</h2>
+<p>输入你的 C++ 代码并保存。</p>
+<pre data-lang="c++" class="language-c++ "><code class="language-c++" data-lang="c++">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main()
+{
+   vector&lt;string&gt; msg {&quot;Hello&quot;, &quot;C++&quot;, &quot;World&quot;, &quot;from&quot;, &quot;VS Code&quot;, &quot;and the C++ extension!&quot;};
+
+   for (const string&amp; word : msg)
+   {
+      cout &lt;&lt; word &lt;&lt; &quot; &quot;;
+   }
+   cout &lt;&lt; endl;
+}
+</code></pre>
+<h1 id="bian-yi-yuan-ma">编译源码</h1>
+<p>创建一个 task.json 文件，告诉 VS Code 如何编译这个程序。</p>
+<p>在标题栏中选择 <strong>Terminal &gt; Configure Default Build Task.</strong> 在下拉栏中，选择 <strong>g++ build active file.</strong> <img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/build-active-file.png" alt="Tasks C++ build dropdown" /></p>
+<p>选择这个命令会在 <strong>.vscode</strong> 文件夹中创建 <strong>task.json</strong> 文件，它的内容如下：</p>
+<pre data-lang="json" class="language-json "><code class="language-json" data-lang="json">{
+  &quot;version&quot;: &quot;2.0.0&quot;,
+  &quot;tasks&quot;: [
+    {
+      &quot;type&quot;: &quot;shell&quot;,
+      &quot;label&quot;: &quot;g++ build active file&quot;,
+      &quot;command&quot;: &quot;&#x2F;usr&#x2F;bin&#x2F;g++&quot;,
+      &quot;args&quot;: [&quot;-g&quot;, &quot;${file}&quot;, &quot;-o&quot;, &quot;${fileDirname}&#x2F;${fileBasenameNoExtension}&quot;],
+      &quot;options&quot;: {
+        &quot;cwd&quot;: &quot;&#x2F;usr&#x2F;bin&quot;
+      },
+      &quot;problemMatcher&quot;: [&quot;$gcc&quot;],
+      &quot;group&quot;: {
+        &quot;kind&quot;: &quot;build&quot;,
+        &quot;isDefault&quot;: true
+      }
+    }
+  ]
+}
+</code></pre>
+<h2 id="yun-xing-bian-yi-ren-wu">运行编译任务</h2>
+<ol>
+<li>
+<p>回到 helloworld.cpp，现在可以开始编译源代码了</p>
+</li>
+<li>
+<p>按下快捷键 Ctrl + Shift + B</p>
+</li>
+<li>
+<p>编译任务开始后，可以在终端界面中看到输出信息</p>
+</li>
+</ol>
+<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/wsl-task-in-terminal.png" alt="G++ build output in terminal" /></p>
+<ol start="4">
+<li>在终端中输入 ./helloworld 即可运行程序</li>
+</ol>
+<h1 id="diao-shi-helloworld-cpp">调试 helloworld.cpp</h1>
+<p>下一步，你会创建一个 launch.json，用以配置 VS Code 如何调用 GDB 调试器来调试程序。选择 <strong>Debug &gt; Add Configuration...</strong> 然后选择 <strong>C++ (GDB/LLDB)</strong>。</p>
+<p>在下拉栏中选择 <strong>g++ build and debug active file</strong>。</p>
+<p>VS Code 会创建一个 launch.json 文件，内容如下：</p>
+<pre data-lang="json" class="language-json "><code class="language-json" data-lang="json">{
+  &quot;version&quot;: &quot;0.2.0&quot;,
+  &quot;configurations&quot;: [
+    {
+      &quot;name&quot;: &quot;g++ build and debug active file&quot;,
+      &quot;type&quot;: &quot;cppdbg&quot;,
+      &quot;request&quot;: &quot;launch&quot;,
+      &quot;program&quot;: &quot;${fileDirname}&#x2F;${fileBasenameNoExtension}&quot;,
+      &quot;args&quot;: [],
+      &quot;stopAtEntry&quot;: false,
+      &quot;cwd&quot;: &quot;${workspaceFolder}&quot;,
+      &quot;environment&quot;: [],
+      &quot;externalConsole&quot;: false,
+      &quot;MIMode&quot;: &quot;gdb&quot;,
+      &quot;setupCommands&quot;: [
+        {
+          &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,
+          &quot;text&quot;: &quot;-enable-pretty-printing&quot;,
+          &quot;ignoreFailures&quot;: true
+        }
+      ],
+      &quot;preLaunchTask&quot;: &quot;g++ build active file&quot;,
+      &quot;miDebuggerPath&quot;: &quot;&#x2F;usr&#x2F;bin&#x2F;gdb&quot;
+    }
+  ]
+}
+</code></pre>
+<h2 id="kai-shi-diao-shi">开始调试</h2>
+<ol>
+<li>回到 helloworld.cpp 文件</li>
+<li>按下 F5 或者选择 <strong>Debug &gt; Start Debugging</strong>。在开始逐步执行代码之前，让我们花点时间注意界面中的几个更改：</li>
+</ol>
+<ul>
+<li>集成的终端会出现在编辑区的下方。在 <strong>Debug Output</strong> 标签页中，你可以看到代码的输出，这表明调试器已经启动并运行。</li>
+<li>编辑器中高亮显示了 <code>main</code> 方法的第一行语句。这是 C++ 扩展自动为你设定的断点。</li>
+</ul>
+<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/wsl-breakpoint-default.png" alt="Initial breakpoint" /></p>
+<ul>
+<li>左侧的 <strong>Run</strong> 视图显示调试信息。</li>
+<li>在代码编辑器的顶部，将显示一个调试控制面板。您可以通过按住左侧的点在屏幕上移动它。</li>
+</ul>
+<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/debug-controls.png" alt="debug-control" /></p>
+<h1 id="guan-bi">关闭</h1>
+<p>当您在 WSL 中完成工作后，可以使用 <strong>File</strong> 菜单中的 <strong>Close Remote Connection</strong> 命令和快捷键（Ctrl+Shift+P）关闭远程会话。 这将重新启动本地运行的 VS Code。您可以在 <strong>File</strong> &gt; <strong>Open Recent</strong> 中选择带有 <strong>[WSL]</strong> 后缀的文件夹来重新打开 WSL 会话。</p>
+
+    </div>
+</article>
+
+      </div>
+    </div>
+    
+  </body>
+
+  <script src="/js/zooming.min.js"></script>
+  <script>if (window.Zooming) window.addEventListener('load', function () { new Zooming().listen('.post-content img') })</script>
+  
+</html>
