@@ -43,7 +43,7 @@
 <ol>
 <li>打开 WSL，进入系统中。</li>
 </ol>
-<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/image-20200207235224938.png" alt="image-20200207235224938" /></p>
+<p><img src="/images/2020/02/vscode-wsl-cpp-01.png" alt="image-20200207235224938" /></p>
 <ol start="2">
 <li>
 <p>建立 projects 文件夹，然后再建立 helloworld 子文件夹</p>
@@ -67,17 +67,17 @@ whereis gdb
 </ol>
 <h1 id="shi-yong-vs-code-lian-jie-dao-wsl">使用 VS Code 连接到 WSL</h1>
 <p>在 VS Code 连接到 WSL，打开 helloworld 文件夹。</p>
-<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/image-20200209092920677.png" alt="image-20200209092920677" /></p>
+<p><img src="/images/2020/02/vscode-wsl-cpp-02.png" alt="image-20200209092920677" /></p>
 <p>你也可以在左下角状态栏看到连接状态。</p>
-<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/image-20200209093241854.png" alt="image-20200209093241854" /></p>
+<p><img src="/images/2020/02/vscode-wsl-cpp-03.png" alt="image-20200209093241854" /></p>
 <p>如果你点击状态栏的 <strong>WSL: Ubuntu</strong>，你会看到一个下拉选单。点击 <strong>Close Remote Connection</strong> 就可以断开与 WSL 的连接。</p>
-<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/image-20200209093649678.png" alt="image-20200209093649678" /></p>
+<p><img src="/images/2020/02/vscode-wsl-cpp-04.png" alt="image-20200209093649678" /></p>
 <h1 id="tian-jia-yuan-ma-wen-jian">添加源码文件</h1>
 <p>在文件管理器标题栏中，点击 <strong>New File</strong> 按钮，并把文件命名为：helloworld.cpp。</p>
-<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/new-file-button.png" alt="New File title bar button" /></p>
+<p><img src="/images/2020/02/vscode-wsl-cpp-05.png" alt="New File title bar button" /></p>
 <h2 id="an-zhuang-c-c-kuo-zhan">安装 C/C++ 扩展</h2>
 <p>如果你还没安装  <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">Microsoft C/C++ extension</a> 扩展，VS Code 会提示你安装。</p>
-<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/cpp-extension-notification.png" alt="C++ extension notification" /></p>
+<p><img src="/images/2020/02/vscode-wsl-cpp-06.png" alt="C++ extension notification" /></p>
 <h2 id="shu-ru-yuan-dai-ma">输入源代码</h2>
 <p>输入你的 C++ 代码并保存。</p>
 <pre data-lang="c++" class="language-c++ "><code class="language-c++" data-lang="c++">#include &lt;iostream&gt;
@@ -99,7 +99,7 @@ int main()
 </code></pre>
 <h1 id="bian-yi-yuan-ma">编译源码</h1>
 <p>创建一个 task.json 文件，告诉 VS Code 如何编译这个程序。</p>
-<p>在标题栏中选择 <strong>Terminal &gt; Configure Default Build Task.</strong> 在下拉栏中，选择 <strong>g++ build active file.</strong> <img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/build-active-file.png" alt="Tasks C++ build dropdown" /></p>
+<p>在标题栏中选择 <strong>Terminal &gt; Configure Default Build Task.</strong> 在下拉栏中，选择 <strong>g++ build active file.</strong> <img src="/images/2020/02/vscode-wsl-cpp-07.png" alt="Tasks C++ build dropdown" /></p>
 <p>选择这个命令会在 <strong>.vscode</strong> 文件夹中创建 <strong>task.json</strong> 文件，它的内容如下：</p>
 <pre data-lang="json" class="language-json "><code class="language-json" data-lang="json">{
   &quot;version&quot;: &quot;2.0.0&quot;,
@@ -133,7 +133,7 @@ int main()
 <p>编译任务开始后，可以在终端界面中看到输出信息</p>
 </li>
 </ol>
-<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/wsl-task-in-terminal.png" alt="G++ build output in terminal" /></p>
+<p><img src="/images/2020/02/vscode-wsl-cpp-08.png" alt="G++ build output in terminal" /></p>
 <ol start="4">
 <li>在终端中输入 ./helloworld 即可运行程序</li>
 </ol>
@@ -177,12 +177,12 @@ int main()
 <li>集成的终端会出现在编辑区的下方。在 <strong>Debug Output</strong> 标签页中，你可以看到代码的输出，这表明调试器已经启动并运行。</li>
 <li>编辑器中高亮显示了 <code>main</code> 方法的第一行语句。这是 C++ 扩展自动为你设定的断点。</li>
 </ul>
-<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/wsl-breakpoint-default.png" alt="Initial breakpoint" /></p>
+<p><img src="/images/2020/02/vscode-wsl-cpp-09.png" alt="Initial breakpoint" /></p>
 <ul>
 <li>左侧的 <strong>Run</strong> 视图显示调试信息。</li>
 <li>在代码编辑器的顶部，将显示一个调试控制面板。您可以通过按住左侧的点在屏幕上移动它。</li>
 </ul>
-<p><img src="https://gitee.com/antfly2021/PicGo-IMG/raw/master/debug-controls.png" alt="debug-control" /></p>
+<p><img src="/images/2020/02/vscode-wsl-cpp-10.png" alt="debug-control" /></p>
 <h1 id="guan-bi">关闭</h1>
 <p>当您在 WSL 中完成工作后，可以使用 <strong>File</strong> 菜单中的 <strong>Close Remote Connection</strong> 命令和快捷键（Ctrl+Shift+P）关闭远程会话。 这将重新启动本地运行的 VS Code。您可以在 <strong>File</strong> &gt; <strong>Open Recent</strong> 中选择带有 <strong>[WSL]</strong> 后缀的文件夹来重新打开 WSL 会话。</p>
 
