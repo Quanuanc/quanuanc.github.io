@@ -50,7 +50,7 @@
 &lt;ol&gt;
 &lt;li&gt;打开 WSL，进入系统中。&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;2020&#x2F;02&#x2F;vscode-wsl-cpp-01.png&quot; alt=&quot;image-20200207235224938&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;.&#x2F;vscode-wsl-cpp-01.png&quot; alt=&quot;image-20200207235224938&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;ol start=&quot;2&quot;&gt;
 &lt;li&gt;
 &lt;p&gt;建立 projects 文件夹，然后再建立 helloworld 子文件夹&lt;&#x2F;p&gt;
@@ -74,17 +74,17 @@ whereis gdb
 &lt;&#x2F;ol&gt;
 &lt;h1 id=&quot;shi-yong-vs-code-lian-jie-dao-wsl&quot;&gt;使用 VS Code 连接到 WSL&lt;&#x2F;h1&gt;
 &lt;p&gt;在 VS Code 连接到 WSL，打开 helloworld 文件夹。&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;2020&#x2F;02&#x2F;vscode-wsl-cpp-02.png&quot; alt=&quot;image-20200209092920677&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;.&#x2F;vscode-wsl-cpp-02.png&quot; alt=&quot;image-20200209092920677&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;你也可以在左下角状态栏看到连接状态。&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;2020&#x2F;02&#x2F;vscode-wsl-cpp-03.png&quot; alt=&quot;image-20200209093241854&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;.&#x2F;vscode-wsl-cpp-03.png&quot; alt=&quot;image-20200209093241854&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;如果你点击状态栏的 &lt;strong&gt;WSL: Ubuntu&lt;&#x2F;strong&gt;，你会看到一个下拉选单。点击 &lt;strong&gt;Close Remote Connection&lt;&#x2F;strong&gt; 就可以断开与 WSL 的连接。&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;2020&#x2F;02&#x2F;vscode-wsl-cpp-04.png&quot; alt=&quot;image-20200209093649678&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;.&#x2F;vscode-wsl-cpp-04.png&quot; alt=&quot;image-20200209093649678&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;tian-jia-yuan-ma-wen-jian&quot;&gt;添加源码文件&lt;&#x2F;h1&gt;
 &lt;p&gt;在文件管理器标题栏中，点击 &lt;strong&gt;New File&lt;&#x2F;strong&gt; 按钮，并把文件命名为：helloworld.cpp。&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;2020&#x2F;02&#x2F;vscode-wsl-cpp-05.png&quot; alt=&quot;New File title bar button&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;.&#x2F;vscode-wsl-cpp-05.png&quot; alt=&quot;New File title bar button&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;an-zhuang-c-c-kuo-zhan&quot;&gt;安装 C&#x2F;C++ 扩展&lt;&#x2F;h2&gt;
 &lt;p&gt;如果你还没安装  &lt;a href=&quot;https:&#x2F;&#x2F;marketplace.visualstudio.com&#x2F;items?itemName=ms-vscode.cpptools&quot;&gt;Microsoft C&#x2F;C++ extension&lt;&#x2F;a&gt; 扩展，VS Code 会提示你安装。&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;2020&#x2F;02&#x2F;vscode-wsl-cpp-06.png&quot; alt=&quot;C++ extension notification&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;.&#x2F;vscode-wsl-cpp-06.png&quot; alt=&quot;C++ extension notification&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;shu-ru-yuan-dai-ma&quot;&gt;输入源代码&lt;&#x2F;h2&gt;
 &lt;p&gt;输入你的 C++ 代码并保存。&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;c++&quot; class=&quot;language-c++ &quot;&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;#include &amp;lt;iostream&amp;gt;
@@ -106,7 +106,7 @@ int main()
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h1 id=&quot;bian-yi-yuan-ma&quot;&gt;编译源码&lt;&#x2F;h1&gt;
 &lt;p&gt;创建一个 task.json 文件，告诉 VS Code 如何编译这个程序。&lt;&#x2F;p&gt;
-&lt;p&gt;在标题栏中选择 &lt;strong&gt;Terminal &amp;gt; Configure Default Build Task.&lt;&#x2F;strong&gt; 在下拉栏中，选择 &lt;strong&gt;g++ build active file.&lt;&#x2F;strong&gt; &lt;img src=&quot;&#x2F;images&#x2F;2020&#x2F;02&#x2F;vscode-wsl-cpp-07.png&quot; alt=&quot;Tasks C++ build dropdown&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;在标题栏中选择 &lt;strong&gt;Terminal &amp;gt; Configure Default Build Task.&lt;&#x2F;strong&gt; 在下拉栏中，选择 &lt;strong&gt;g++ build active file.&lt;&#x2F;strong&gt; &lt;img src=&quot;.&#x2F;vscode-wsl-cpp-07.png&quot; alt=&quot;Tasks C++ build dropdown&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;选择这个命令会在 &lt;strong&gt;.vscode&lt;&#x2F;strong&gt; 文件夹中创建 &lt;strong&gt;task.json&lt;&#x2F;strong&gt; 文件，它的内容如下：&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;json&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;{
   &amp;quot;version&amp;quot;: &amp;quot;2.0.0&amp;quot;,
@@ -140,7 +140,7 @@ int main()
 &lt;p&gt;编译任务开始后，可以在终端界面中看到输出信息&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;2020&#x2F;02&#x2F;vscode-wsl-cpp-08.png&quot; alt=&quot;G++ build output in terminal&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;.&#x2F;vscode-wsl-cpp-08.png&quot; alt=&quot;G++ build output in terminal&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;ol start=&quot;4&quot;&gt;
 &lt;li&gt;在终端中输入 .&#x2F;helloworld 即可运行程序&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
@@ -184,12 +184,12 @@ int main()
 &lt;li&gt;集成的终端会出现在编辑区的下方。在 &lt;strong&gt;Debug Output&lt;&#x2F;strong&gt; 标签页中，你可以看到代码的输出，这表明调试器已经启动并运行。&lt;&#x2F;li&gt;
 &lt;li&gt;编辑器中高亮显示了 &lt;code&gt;main&lt;&#x2F;code&gt; 方法的第一行语句。这是 C++ 扩展自动为你设定的断点。&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;2020&#x2F;02&#x2F;vscode-wsl-cpp-09.png&quot; alt=&quot;Initial breakpoint&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;.&#x2F;vscode-wsl-cpp-09.png&quot; alt=&quot;Initial breakpoint&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;左侧的 &lt;strong&gt;Run&lt;&#x2F;strong&gt; 视图显示调试信息。&lt;&#x2F;li&gt;
 &lt;li&gt;在代码编辑器的顶部，将显示一个调试控制面板。您可以通过按住左侧的点在屏幕上移动它。&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;2020&#x2F;02&#x2F;vscode-wsl-cpp-10.png&quot; alt=&quot;debug-control&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;.&#x2F;vscode-wsl-cpp-10.png&quot; alt=&quot;debug-control&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;guan-bi&quot;&gt;关闭&lt;&#x2F;h1&gt;
 &lt;p&gt;当您在 WSL 中完成工作后，可以使用 &lt;strong&gt;File&lt;&#x2F;strong&gt; 菜单中的 &lt;strong&gt;Close Remote Connection&lt;&#x2F;strong&gt; 命令和快捷键（Ctrl+Shift+P）关闭远程会话。 这将重新启动本地运行的 VS Code。您可以在 &lt;strong&gt;File&lt;&#x2F;strong&gt; &amp;gt; &lt;strong&gt;Open Recent&lt;&#x2F;strong&gt; 中选择带有 &lt;strong&gt;[WSL]&lt;&#x2F;strong&gt; 后缀的文件夹来重新打开 WSL 会话。&lt;&#x2F;p&gt;
 </content>
