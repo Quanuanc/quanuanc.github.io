@@ -29,7 +29,7 @@
 <p>本文翻译自 Visual Studio Code 官方说明文档 <a href="https://code.visualstudio.com/docs/cpp/config-wsl">Using C++ and WSL in VS Code</a> </p>
 <p><strong>本文根据原文内容意译，而非逐词逐句翻译，如需了解更多，推荐阅读原文</strong></p>
 <hr />
-<p>在本教程中，你将配置 Visual Studio Code，在 Windows Linux 子系统（WSL） Ubuntu 中使用 GCC C++编译器（g++）和 GDB 调试器。GCC 代表了 GNU 编译器集合，GDB 是 GNU 调试器。WSL 是 Windows 中的 Linux 环境，它直接运行在计算机硬件上，而非虚拟机中。</p>
+<p>在本教程中，你将配置 Visual Studio Code，在 Windows Linux 子系统（WSL）Ubuntu 中使用 GCC C++编译器（g++）和 GDB 调试器。GCC 代表了 GNU 编译器集合，GDB 是 GNU 调试器。WSL 是 Windows 中的 Linux 环境，它直接运行在计算机硬件上，而非虚拟机中。</p>
 <blockquote>
 <p>Note:  本教程的大部分内容适用于直接在 Linux 机器上使用 C++ 和 VS Code。</p>
 </blockquote>
@@ -47,22 +47,22 @@
 <ol start="2">
 <li>
 <p>建立 projects 文件夹，然后再建立 helloworld 子文件夹</p>
-<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">mkdir projects
-cd projects
-mkdir helloworld
-</code></pre>
+<pre data-lang="bash" style="background-color:#fafafa;color:#383a42;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#e45649;">mkdir</span><span> projects
+</span><span style="color:#0184bc;">cd</span><span> projects
+</span><span style="color:#e45649;">mkdir</span><span> helloworld
+</span></code></pre>
 </li>
 <li>
 <p>安装编译和调试工具。在 Ubuntu 中安装只需要执行以下命令即可</p>
-<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">sudo apt-get update
-sudo apt-get install build-essential gdb
-</code></pre>
+<pre data-lang="bash" style="background-color:#fafafa;color:#383a42;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#e45649;">sudo</span><span> apt-get update
+</span><span style="color:#e45649;">sudo</span><span> apt-get install build-essential gdb
+</span></code></pre>
 </li>
 <li>
 <p>确认以上工具是否已经安装成功</p>
-<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">whereis g++
-whereis gdb
-</code></pre>
+<pre data-lang="bash" style="background-color:#fafafa;color:#383a42;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#e45649;">whereis</span><span> g++
+</span><span style="color:#e45649;">whereis</span><span> gdb
+</span></code></pre>
 </li>
 </ol>
 <h1 id="shi-yong-vs-code-lian-jie-dao-wsl">使用 VS Code 连接到 WSL</h1>
@@ -80,47 +80,47 @@ whereis gdb
 <p><img src="./vscode-wsl-cpp-06.png" alt="C++ extension notification" /></p>
 <h2 id="shu-ru-yuan-dai-ma">输入源代码</h2>
 <p>输入你的 C++ 代码并保存。</p>
-<pre data-lang="c++" class="language-c++ "><code class="language-c++" data-lang="c++">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;string&gt;
-
-using namespace std;
-
-int main()
-{
-   vector&lt;string&gt; msg {&quot;Hello&quot;, &quot;C++&quot;, &quot;World&quot;, &quot;from&quot;, &quot;VS Code&quot;, &quot;and the C++ extension!&quot;};
-
-   for (const string&amp; word : msg)
-   {
-      cout &lt;&lt; word &lt;&lt; &quot; &quot;;
-   }
-   cout &lt;&lt; endl;
-}
-</code></pre>
+<pre data-lang="c++" style="background-color:#fafafa;color:#383a42;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#a626a4;">#include </span><span style="color:#50a14f;">&lt;iostream&gt;
+</span><span style="color:#a626a4;">#include </span><span style="color:#50a14f;">&lt;vector&gt;
+</span><span style="color:#a626a4;">#include </span><span style="color:#50a14f;">&lt;string&gt;
+</span><span>
+</span><span style="color:#a626a4;">using namespace</span><span> std;
+</span><span>
+</span><span style="color:#a626a4;">int </span><span style="color:#0184bc;">main</span><span>()
+</span><span>{
+</span><span>   vector&lt;string&gt; </span><span style="color:#e45649;">msg </span><span>{</span><span style="color:#50a14f;">&quot;Hello&quot;</span><span>, </span><span style="color:#50a14f;">&quot;C++&quot;</span><span>, </span><span style="color:#50a14f;">&quot;World&quot;</span><span>, </span><span style="color:#50a14f;">&quot;from&quot;</span><span>, </span><span style="color:#50a14f;">&quot;VS Code&quot;</span><span>, </span><span style="color:#50a14f;">&quot;and the C++ extension!&quot;</span><span>};
+</span><span>
+</span><span>   </span><span style="color:#a626a4;">for </span><span>(</span><span style="color:#a626a4;">const</span><span> string</span><span style="color:#a626a4;">&amp;</span><span> word </span><span style="color:#a626a4;">:</span><span> msg)
+</span><span>   {
+</span><span>      cout </span><span style="color:#a626a4;">&lt;&lt;</span><span> word </span><span style="color:#a626a4;">&lt;&lt; </span><span style="color:#50a14f;">&quot; &quot;</span><span>;
+</span><span>   }
+</span><span>   cout </span><span style="color:#a626a4;">&lt;&lt;</span><span> endl;
+</span><span>}
+</span></code></pre>
 <h1 id="bian-yi-yuan-ma">编译源码</h1>
 <p>创建一个 task.json 文件，告诉 VS Code 如何编译这个程序。</p>
 <p>在标题栏中选择 <strong>Terminal &gt; Configure Default Build Task.</strong> 在下拉栏中，选择 <strong>g++ build active file.</strong> <img src="./vscode-wsl-cpp-07.png" alt="Tasks C++ build dropdown" /></p>
 <p>选择这个命令会在 <strong>.vscode</strong> 文件夹中创建 <strong>task.json</strong> 文件，它的内容如下：</p>
-<pre data-lang="json" class="language-json "><code class="language-json" data-lang="json">{
-  &quot;version&quot;: &quot;2.0.0&quot;,
-  &quot;tasks&quot;: [
-    {
-      &quot;type&quot;: &quot;shell&quot;,
-      &quot;label&quot;: &quot;g++ build active file&quot;,
-      &quot;command&quot;: &quot;&#x2F;usr&#x2F;bin&#x2F;g++&quot;,
-      &quot;args&quot;: [&quot;-g&quot;, &quot;${file}&quot;, &quot;-o&quot;, &quot;${fileDirname}&#x2F;${fileBasenameNoExtension}&quot;],
-      &quot;options&quot;: {
-        &quot;cwd&quot;: &quot;&#x2F;usr&#x2F;bin&quot;
-      },
-      &quot;problemMatcher&quot;: [&quot;$gcc&quot;],
-      &quot;group&quot;: {
-        &quot;kind&quot;: &quot;build&quot;,
-        &quot;isDefault&quot;: true
-      }
-    }
-  ]
-}
-</code></pre>
+<pre data-lang="json" style="background-color:#fafafa;color:#383a42;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  </span><span style="color:#50a14f;">&quot;version&quot;</span><span>: </span><span style="color:#50a14f;">&quot;2.0.0&quot;</span><span>,
+</span><span>  </span><span style="color:#50a14f;">&quot;tasks&quot;</span><span>: [
+</span><span>    {
+</span><span>      </span><span style="color:#50a14f;">&quot;type&quot;</span><span>: </span><span style="color:#50a14f;">&quot;shell&quot;</span><span>,
+</span><span>      </span><span style="color:#50a14f;">&quot;label&quot;</span><span>: </span><span style="color:#50a14f;">&quot;g++ build active file&quot;</span><span>,
+</span><span>      </span><span style="color:#50a14f;">&quot;command&quot;</span><span>: </span><span style="color:#50a14f;">&quot;/usr/bin/g++&quot;</span><span>,
+</span><span>      </span><span style="color:#50a14f;">&quot;args&quot;</span><span>: [</span><span style="color:#50a14f;">&quot;-g&quot;</span><span>, </span><span style="color:#50a14f;">&quot;${file}&quot;</span><span>, </span><span style="color:#50a14f;">&quot;-o&quot;</span><span>, </span><span style="color:#50a14f;">&quot;${fileDirname}/${fileBasenameNoExtension}&quot;</span><span>],
+</span><span>      </span><span style="color:#50a14f;">&quot;options&quot;</span><span>: {
+</span><span>        </span><span style="color:#50a14f;">&quot;cwd&quot;</span><span>: </span><span style="color:#50a14f;">&quot;/usr/bin&quot;
+</span><span>      },
+</span><span>      </span><span style="color:#50a14f;">&quot;problemMatcher&quot;</span><span>: [</span><span style="color:#50a14f;">&quot;$gcc&quot;</span><span>],
+</span><span>      </span><span style="color:#50a14f;">&quot;group&quot;</span><span>: {
+</span><span>        </span><span style="color:#50a14f;">&quot;kind&quot;</span><span>: </span><span style="color:#50a14f;">&quot;build&quot;</span><span>,
+</span><span>        </span><span style="color:#50a14f;">&quot;isDefault&quot;</span><span>: </span><span style="color:#c18401;">true
+</span><span>      }
+</span><span>    }
+</span><span>  ]
+</span><span>}
+</span></code></pre>
 <h2 id="yun-xing-bian-yi-ren-wu">运行编译任务</h2>
 <ol>
 <li>
@@ -141,33 +141,33 @@ int main()
 <p>下一步，你会创建一个 launch.json，用以配置 VS Code 如何调用 GDB 调试器来调试程序。选择 <strong>Debug &gt; Add Configuration...</strong> 然后选择 <strong>C++ (GDB/LLDB)</strong>。</p>
 <p>在下拉栏中选择 <strong>g++ build and debug active file</strong>。</p>
 <p>VS Code 会创建一个 launch.json 文件，内容如下：</p>
-<pre data-lang="json" class="language-json "><code class="language-json" data-lang="json">{
-  &quot;version&quot;: &quot;0.2.0&quot;,
-  &quot;configurations&quot;: [
-    {
-      &quot;name&quot;: &quot;g++ build and debug active file&quot;,
-      &quot;type&quot;: &quot;cppdbg&quot;,
-      &quot;request&quot;: &quot;launch&quot;,
-      &quot;program&quot;: &quot;${fileDirname}&#x2F;${fileBasenameNoExtension}&quot;,
-      &quot;args&quot;: [],
-      &quot;stopAtEntry&quot;: false,
-      &quot;cwd&quot;: &quot;${workspaceFolder}&quot;,
-      &quot;environment&quot;: [],
-      &quot;externalConsole&quot;: false,
-      &quot;MIMode&quot;: &quot;gdb&quot;,
-      &quot;setupCommands&quot;: [
-        {
-          &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,
-          &quot;text&quot;: &quot;-enable-pretty-printing&quot;,
-          &quot;ignoreFailures&quot;: true
-        }
-      ],
-      &quot;preLaunchTask&quot;: &quot;g++ build active file&quot;,
-      &quot;miDebuggerPath&quot;: &quot;&#x2F;usr&#x2F;bin&#x2F;gdb&quot;
-    }
-  ]
-}
-</code></pre>
+<pre data-lang="json" style="background-color:#fafafa;color:#383a42;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  </span><span style="color:#50a14f;">&quot;version&quot;</span><span>: </span><span style="color:#50a14f;">&quot;0.2.0&quot;</span><span>,
+</span><span>  </span><span style="color:#50a14f;">&quot;configurations&quot;</span><span>: [
+</span><span>    {
+</span><span>      </span><span style="color:#50a14f;">&quot;name&quot;</span><span>: </span><span style="color:#50a14f;">&quot;g++ build and debug active file&quot;</span><span>,
+</span><span>      </span><span style="color:#50a14f;">&quot;type&quot;</span><span>: </span><span style="color:#50a14f;">&quot;cppdbg&quot;</span><span>,
+</span><span>      </span><span style="color:#50a14f;">&quot;request&quot;</span><span>: </span><span style="color:#50a14f;">&quot;launch&quot;</span><span>,
+</span><span>      </span><span style="color:#50a14f;">&quot;program&quot;</span><span>: </span><span style="color:#50a14f;">&quot;${fileDirname}/${fileBasenameNoExtension}&quot;</span><span>,
+</span><span>      </span><span style="color:#50a14f;">&quot;args&quot;</span><span>: [],
+</span><span>      </span><span style="color:#50a14f;">&quot;stopAtEntry&quot;</span><span>: </span><span style="color:#c18401;">false</span><span>,
+</span><span>      </span><span style="color:#50a14f;">&quot;cwd&quot;</span><span>: </span><span style="color:#50a14f;">&quot;${workspaceFolder}&quot;</span><span>,
+</span><span>      </span><span style="color:#50a14f;">&quot;environment&quot;</span><span>: [],
+</span><span>      </span><span style="color:#50a14f;">&quot;externalConsole&quot;</span><span>: </span><span style="color:#c18401;">false</span><span>,
+</span><span>      </span><span style="color:#50a14f;">&quot;MIMode&quot;</span><span>: </span><span style="color:#50a14f;">&quot;gdb&quot;</span><span>,
+</span><span>      </span><span style="color:#50a14f;">&quot;setupCommands&quot;</span><span>: [
+</span><span>        {
+</span><span>          </span><span style="color:#50a14f;">&quot;description&quot;</span><span>: </span><span style="color:#50a14f;">&quot;Enable pretty-printing for gdb&quot;</span><span>,
+</span><span>          </span><span style="color:#50a14f;">&quot;text&quot;</span><span>: </span><span style="color:#50a14f;">&quot;-enable-pretty-printing&quot;</span><span>,
+</span><span>          </span><span style="color:#50a14f;">&quot;ignoreFailures&quot;</span><span>: </span><span style="color:#c18401;">true
+</span><span>        }
+</span><span>      ],
+</span><span>      </span><span style="color:#50a14f;">&quot;preLaunchTask&quot;</span><span>: </span><span style="color:#50a14f;">&quot;g++ build active file&quot;</span><span>,
+</span><span>      </span><span style="color:#50a14f;">&quot;miDebuggerPath&quot;</span><span>: </span><span style="color:#50a14f;">&quot;/usr/bin/gdb&quot;
+</span><span>    }
+</span><span>  ]
+</span><span>}
+</span></code></pre>
 <h2 id="kai-shi-diao-shi">开始调试</h2>
 <ol>
 <li>回到 helloworld.cpp 文件</li>
@@ -184,7 +184,7 @@ int main()
 </ul>
 <p><img src="./vscode-wsl-cpp-10.png" alt="debug-control" /></p>
 <h1 id="guan-bi">关闭</h1>
-<p>当您在 WSL 中完成工作后，可以使用 <strong>File</strong> 菜单中的 <strong>Close Remote Connection</strong> 命令和快捷键（Ctrl+Shift+P）关闭远程会话。 这将重新启动本地运行的 VS Code。您可以在 <strong>File</strong> &gt; <strong>Open Recent</strong> 中选择带有 <strong>[WSL]</strong> 后缀的文件夹来重新打开 WSL 会话。</p>
+<p>当您在 WSL 中完成工作后，可以使用 <strong>File</strong> 菜单中的 <strong>Close Remote Connection</strong> 命令和快捷键（Ctrl+Shift+P）关闭远程会话。这将重新启动本地运行的 VS Code。您可以在 <strong>File</strong> &gt; <strong>Open Recent</strong> 中选择带有 <strong>[WSL]</strong> 后缀的文件夹来重新打开 WSL 会话。</p>
 
     </div>
 </article>

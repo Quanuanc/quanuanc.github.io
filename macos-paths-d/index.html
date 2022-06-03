@@ -26,8 +26,8 @@
 </header>
     <div class="post-content" itemtype="articleBody">
         <p>通常来说，设定<code>PATH</code>可能不是一件简单的事情，我猜你一定使用过以下语法对<code>PATH</code>进行修改，例如：</p>
-<pre data-lang="shell" class="language-shell "><code class="language-shell" data-lang="shell">export PATH=$PATH:&#x2F;path&#x2F;to&#x2F;dir
-</code></pre>
+<pre data-lang="sh" style="background-color:#fafafa;color:#383a42;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#a626a4;">export </span><span style="color:#e45649;">PATH</span><span style="color:#a626a4;">=</span><span style="color:#50a14f;">$</span><span style="color:#e45649;">PATH</span><span style="color:#50a14f;">:/path/to/dir
+</span></code></pre>
 <p>这种方式依靠冒号<code>:</code>来分割各个路径，使得我们很难用肉眼来区分。</p>
 <p>在 macOS 环境下，设定<code>PATH</code>有比<code>export</code>更方便优雅的方式，那就是 /etc/paths.d/。</p>
 <p>要添加一个路径到到<code>PATH</code>中，只需要在 /etc/paths.d/ 下新建一个文件（文件名可以随意），然后把该路径写到文件中即可。</p>
@@ -40,8 +40,8 @@
 <p><img src="./img01.png" alt="img01" /></p>
 <p>大功告成。到这里我们成功添加了一条路径到<code>PATH</code>，当然，这个 demo 文件也可以有多条路径，每一行可以添加一条路径。</p>
 <p>重新打开终端，输入下面这条命令就可以看到当前的<code>PATH</code>变量内容。</p>
-<pre data-lang="shell" class="language-shell "><code class="language-shell" data-lang="shell">sed &#x27;s&#x2F;:&#x2F;\n&#x2F;g&#x27; &lt;&lt;&lt; &quot;$PATH&quot;
-</code></pre>
+<pre data-lang="sh" style="background-color:#fafafa;color:#383a42;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#e45649;">sed </span><span style="color:#50a14f;">&#39;s/:/\n/g&#39; </span><span style="color:#a626a4;">&lt;&lt;&lt; </span><span style="color:#50a14f;">&quot;$</span><span style="color:#e45649;">PATH</span><span style="color:#50a14f;">&quot;
+</span></code></pre>
 
     </div>
 </article>

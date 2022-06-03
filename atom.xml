@@ -13,8 +13,8 @@
 		<link href="https://quanuanc.github.io/macos-paths-d/" type="text/html"/>
 		<id>https://quanuanc.github.io/macos-paths-d/</id>
 		<content type="html">&lt;p&gt;通常来说，设定&lt;code&gt;PATH&lt;&#x2F;code&gt;可能不是一件简单的事情，我猜你一定使用过以下语法对&lt;code&gt;PATH&lt;&#x2F;code&gt;进行修改，例如：&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;shell&quot; class=&quot;language-shell &quot;&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;export PATH=$PATH:&amp;#x2F;path&amp;#x2F;to&amp;#x2F;dir
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;export &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;PATH&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;PATH&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;:&#x2F;path&#x2F;to&#x2F;dir
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;这种方式依靠冒号&lt;code&gt;:&lt;&#x2F;code&gt;来分割各个路径，使得我们很难用肉眼来区分。&lt;&#x2F;p&gt;
 &lt;p&gt;在 macOS 环境下，设定&lt;code&gt;PATH&lt;&#x2F;code&gt;有比&lt;code&gt;export&lt;&#x2F;code&gt;更方便优雅的方式，那就是 &#x2F;etc&#x2F;paths.d&#x2F;。&lt;&#x2F;p&gt;
 &lt;p&gt;要添加一个路径到到&lt;code&gt;PATH&lt;&#x2F;code&gt;中，只需要在 &#x2F;etc&#x2F;paths.d&#x2F; 下新建一个文件（文件名可以随意），然后把该路径写到文件中即可。&lt;&#x2F;p&gt;
@@ -27,21 +27,21 @@
 &lt;p&gt;&lt;img src=&quot;.&#x2F;img01.png&quot; alt=&quot;img01&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;大功告成。到这里我们成功添加了一条路径到&lt;code&gt;PATH&lt;&#x2F;code&gt;，当然，这个 demo 文件也可以有多条路径，每一行可以添加一条路径。&lt;&#x2F;p&gt;
 &lt;p&gt;重新打开终端，输入下面这条命令就可以看到当前的&lt;code&gt;PATH&lt;&#x2F;code&gt;变量内容。&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;shell&quot; class=&quot;language-shell &quot;&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;sed &amp;#x27;s&amp;#x2F;:&amp;#x2F;\n&amp;#x2F;g&amp;#x27; &amp;lt;&amp;lt;&amp;lt; &amp;quot;$PATH&amp;quot;
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;sed &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;#39;s&#x2F;:&#x2F;\n&#x2F;g&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;&amp;lt;&amp;lt;&amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;PATH&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>[转载] 一个逢人必问: &quot;可以借我 10 块钱吗?&quot; 的土狗.....</title>
+		<title>[转载] 一个逢人必问：&quot;可以借我 10 块钱吗？&quot; 的土狗.....</title>
 		<published>2021-02-04T00:00:00+00:00</published>
 		<updated>2021-02-04T00:00:00+00:00</updated>
 		<link href="https://quanuanc.github.io/v2ex-borrow-money/" type="text/html"/>
 		<id>https://quanuanc.github.io/v2ex-borrow-money/</id>
 		<content type="html">&lt;p&gt;OK，很少写帖子，这个应该算是我的处女贴，最起码在 V2EX 是。格式不好，诸君请包含。直接开始正题。&lt;&#x2F;p&gt;
-&lt;p&gt;事情的经过是这个样子，我在 20 年初的时候加入一个叫独立开发者群（微信群），里面的大佬真的说话很好听，技术一个个都很牛批，经常说的东西我都没听过，SO，我称之为卧虎藏龙的群。本人的工作节奏不均匀，有时候很忙有时候很闲，闲的时候呢就应该摸鱼，然后我就使劲的摸，游离于各个群之间吹水聊骚，那种快乐想必大家都体验过。可能是因为鄙人过于活跃，被接下来的这位网络乞丐就盯上了，他叫宋超，应该是真名。他用他高配的 MAC 截图的时候我看的很清楚 SongChaodeMacBook Pro ~ %，我想一个正常人应该不会用别人的名字。长相我不知道，性取向正常的我对男性朋友的容貌仅有 0%的兴趣，总之再帅也跟我差一点点，所以看那些个玩意没意思。我记着有一天我在群里提问，有大佬帮我解答了一波。然后这宋狗就特么开始搭讪了，问我的职业。我当然回答到我是伟大的软件工程师，这斯一听后开始了求学 10000 连问，我特么是专业解答师吗？我特么除了会写几行 BUG 还会干啥，除了问软件行业怎么入行，学习路线是什么之外，还特么老问一些跟技术无关的，我特么哪儿知道哪个黄色网站刺激，我特么哪儿知道阳痿怎么治。我特么是个写代码的中医吗？去特 M 的。当然呢我跟这条土狗交流的时候还是较为绅士的，因为我 9 年义务教育成绩很优异。&lt;&#x2F;p&gt;
+&lt;p&gt;事情的经过是这个样子，我在 20 年初的时候加入一个叫独立开发者群（微信群），里面的大佬真的说话很好听，技术一个个都很牛批，经常说的东西我都没听过，SO，我称之为卧虎藏龙的群。本人的工作节奏不均匀，有时候很忙有时候很闲，闲的时候呢就应该摸鱼，然后我就使劲的摸，游离于各个群之间吹水聊骚，那种快乐想必大家都体验过。可能是因为鄙人过于活跃，被接下来的这位网络乞丐就盯上了，他叫宋超，应该是真名。他用他高配的 MAC 截图的时候我看的很清楚 SongChaodeMacBook Pro ~ %，我想一个正常人应该不会用别人的名字。长相我不知道，性取向正常的我对男性朋友的容貌仅有 0% 的兴趣，总之再帅也跟我差一点点，所以看那些个玩意没意思。我记着有一天我在群里提问，有大佬帮我解答了一波。然后这宋狗就特么开始搭讪了，问我的职业。我当然回答到我是伟大的软件工程师，这斯一听后开始了求学 10000 连问，我特么是专业解答师吗？我特么除了会写几行 BUG 还会干啥，除了问软件行业怎么入行，学习路线是什么之外，还特么老问一些跟技术无关的，我特么哪儿知道哪个黄色网站刺激，我特么哪儿知道阳痿怎么治。我特么是个写代码的中医吗？去特 M 的。当然呢我跟这条土狗交流的时候还是较为绅士的，因为我 9 年义务教育成绩很优异。&lt;&#x2F;p&gt;
 &lt;p&gt;就这样这货跟我瞎几掰扯了有一段时间后他告诉他叫啥名（我特么并不想知道你叫什么），突然有一天他感觉似乎是可以跟我开口借钱了，也就真特么开始了这一段神奇切草他 M 的经历，那天他开口借钱，第一句就是标题那句。我当时还在欢快的撸码中，突然间我思路就断了，我被这神奇的问题给惊到了。这年头谁还差 10 块钱？我问到：借 10 块能干啥？他说：“没钱吃饭...”，我当时就在想要不是骗子就是家里有人住院了实在是穷的揭不开锅。我当时犹豫了，也困惑了，但是最终我还是没能狠心，毕竟善良了这么多年，怎能忍心看着他挨饿，他就是问我借 10 块钱，他能有什么坏心眼？而且他说的是借，多么诚恳的态度，我的 10 块钱只是在哪儿寄存一下下而已，多大点事情嘛。我能不帮他吗？那绝对不能够。于是乎...转账 10 元&lt;&#x2F;p&gt;
 &lt;p&gt;有点意思啊哥们，说一周还还真就一周还给了我。这时候我对这个人有了点好感，虽然只有 10 块钱，但是一个人的品质不能用钱来衡量。哥们你很守信，够资格当我网友，我很中意你呀！&lt;&#x2F;p&gt;
-&lt;p&gt;不知道是不是像狗报恩那样，他知道我帮了他，后面很长一段时间老是给我发黄色图片，还有段视频，还问我好不好看。还问我有没有女同事在旁边。实不相瞒，有的确实还挺好看的，但是他问有没有女同事在旁边一下子让我觉得这 B 网友是想看我出丑还是怎么着？有病吧，难不成我他吗的叫上女同事一起看？我就说上班时间别老发那些个东西，影响不好。但是呢，他好像听不懂，就像有时候人想让狗干点什么事情，狗永远不懂人在说什么，SO 。。又不是我家狗，爱怎么样就怎么样呗。。。&lt;&#x2F;p&gt;
+&lt;p&gt;不知道是不是像狗报恩那样，他知道我帮了他，后面很长一段时间老是给我发黄色图片，还有段视频，还问我好不好看。还问我有没有女同事在旁边。实不相瞒，有的确实还挺好看的，但是他问有没有女同事在旁边一下子让我觉得这 B 网友是想看我出丑还是怎么着？有病吧，难不成我他吗的叫上女同事一起看？我就说上班时间别老发那些个东西，影响不好。但是呢，他好像听不懂，就像有时候人想让狗干点什么事情，狗永远不懂人在说什么，SO。。又不是我家狗，爱怎么样就怎么样呗。。。&lt;&#x2F;p&gt;
 &lt;p&gt;这种状况持续了有尽两个月，涩图那玩意看多了也会厌倦的嘛。况且我是已婚男，看有什么用，除了让你帮儿硬还能怎么样？这段时间里我跟他公用一个机场，按约定每月我出 10 块钱，其余的我不管。这段时间很少聊天。他应该是找别人借的多一些，就没找我借。（这个是后面群里有个老哥被借 40 没有还我才知道的）&lt;&#x2F;p&gt;
 &lt;p&gt;平静是不可能平静的，我以为我跟这位网友就是简单的公用一个机场这种关系。但是命运似乎不是这样安排的，他，他 M 的又开始借钱了，我一开始真的就是拒绝的，我觉得一个男的，成年男性。他吗的有病吧经常差这点钱，那个时候我真的很想问：你家里是不是出事了？但是我没问，担心回答是：“是”。那我岂不是要多给点钱才能帮助这位网友。最后一次借给他也是 10 块钱。我死活都不想借了，他说：“借我 10 块 5 天内还你 15 块“，我他 M 是什么人，放高利贷的吗？我借了你前前后后 5 次钱看上你那点利息了？我是真的累了，也被他的真诚（恶心的纠缠）打动。最后我说：”借 10 块 5 天还 13 块“，是的，我怎么会忍心要他 5 块的利息，你也太高了。3 块就可以了我觉得。声明一下，这种事情别来喷子喷我，我是想加上利息以后他就觉得我人品不怎么滴，然后就不找我借钱了吧，用意在这儿。&lt;&#x2F;p&gt;
 &lt;p&gt;然后事情的发展就如同电视剧一般，借钱，赖账，拉黑微信，退群，跑路。。。这种看着不像穷人，但是又装疯卖傻的狗 B 到底是什么形状的 Y 道分娩出来的？我很好奇他的家人，因为我始终相信基因以及遗传。。。&lt;&#x2F;p&gt;
@@ -61,7 +61,7 @@
 &lt;p&gt;本文翻译自 Visual Studio Code 官方说明文档 &lt;a href=&quot;https:&#x2F;&#x2F;code.visualstudio.com&#x2F;docs&#x2F;cpp&#x2F;config-wsl&quot;&gt;Using C++ and WSL in VS Code&lt;&#x2F;a&gt; &lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;本文根据原文内容意译，而非逐词逐句翻译，如需了解更多，推荐阅读原文&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
-&lt;p&gt;在本教程中，你将配置 Visual Studio Code，在 Windows Linux 子系统（WSL） Ubuntu 中使用 GCC C++编译器（g++）和 GDB 调试器。GCC 代表了 GNU 编译器集合，GDB 是 GNU 调试器。WSL 是 Windows 中的 Linux 环境，它直接运行在计算机硬件上，而非虚拟机中。&lt;&#x2F;p&gt;
+&lt;p&gt;在本教程中，你将配置 Visual Studio Code，在 Windows Linux 子系统（WSL）Ubuntu 中使用 GCC C++编译器（g++）和 GDB 调试器。GCC 代表了 GNU 编译器集合，GDB 是 GNU 调试器。WSL 是 Windows 中的 Linux 环境，它直接运行在计算机硬件上，而非虚拟机中。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Note:  本教程的大部分内容适用于直接在 Linux 机器上使用 C++ 和 VS Code。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -79,22 +79,22 @@
 &lt;ol start=&quot;2&quot;&gt;
 &lt;li&gt;
 &lt;p&gt;建立 projects 文件夹，然后再建立 helloworld 子文件夹&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir projects
-cd projects
-mkdir helloworld
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; projects
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0184bc;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; projects
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; helloworld
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;安装编译和调试工具。在 Ubuntu 中安装只需要执行以下命令即可&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get update
-sudo apt-get install build-essential gdb
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt-get update
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt-get install build-essential gdb
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;确认以上工具是否已经安装成功&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;whereis g++
-whereis gdb
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;whereis&lt;&#x2F;span&gt;&lt;span&gt; g++
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;whereis&lt;&#x2F;span&gt;&lt;span&gt; gdb
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h1 id=&quot;shi-yong-vs-code-lian-jie-dao-wsl&quot;&gt;使用 VS Code 连接到 WSL&lt;&#x2F;h1&gt;
@@ -112,47 +112,47 @@ whereis gdb
 &lt;p&gt;&lt;img src=&quot;.&#x2F;vscode-wsl-cpp-06.png&quot; alt=&quot;C++ extension notification&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;shu-ru-yuan-dai-ma&quot;&gt;输入源代码&lt;&#x2F;h2&gt;
 &lt;p&gt;输入你的 C++ 代码并保存。&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;c++&quot; class=&quot;language-c++ &quot;&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;vector&amp;gt;
-#include &amp;lt;string&amp;gt;
-
-using namespace std;
-
-int main()
-{
-   vector&amp;lt;string&amp;gt; msg {&amp;quot;Hello&amp;quot;, &amp;quot;C++&amp;quot;, &amp;quot;World&amp;quot;, &amp;quot;from&amp;quot;, &amp;quot;VS Code&amp;quot;, &amp;quot;and the C++ extension!&amp;quot;};
-
-   for (const string&amp;amp; word : msg)
-   {
-      cout &amp;lt;&amp;lt; word &amp;lt;&amp;lt; &amp;quot; &amp;quot;;
-   }
-   cout &amp;lt;&amp;lt; endl;
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;c++&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-c++ &quot;&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;lt;iostream&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;lt;vector&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;lt;string&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;using namespace&lt;&#x2F;span&gt;&lt;span&gt; std;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0184bc;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;   vector&amp;lt;string&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;msg &lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;Hello&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;C++&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;World&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;from&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;VS Code&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;and the C++ extension!&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;const&lt;&#x2F;span&gt;&lt;span&gt; string&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt; word &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; msg)
+&lt;&#x2F;span&gt;&lt;span&gt;   {
+&lt;&#x2F;span&gt;&lt;span&gt;      cout &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;&amp;lt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt; word &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;&amp;lt;&amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot; &amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;   }
+&lt;&#x2F;span&gt;&lt;span&gt;   cout &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;&amp;lt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt; endl;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h1 id=&quot;bian-yi-yuan-ma&quot;&gt;编译源码&lt;&#x2F;h1&gt;
 &lt;p&gt;创建一个 task.json 文件，告诉 VS Code 如何编译这个程序。&lt;&#x2F;p&gt;
 &lt;p&gt;在标题栏中选择 &lt;strong&gt;Terminal &amp;gt; Configure Default Build Task.&lt;&#x2F;strong&gt; 在下拉栏中，选择 &lt;strong&gt;g++ build active file.&lt;&#x2F;strong&gt; &lt;img src=&quot;.&#x2F;vscode-wsl-cpp-07.png&quot; alt=&quot;Tasks C++ build dropdown&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;选择这个命令会在 &lt;strong&gt;.vscode&lt;&#x2F;strong&gt; 文件夹中创建 &lt;strong&gt;task.json&lt;&#x2F;strong&gt; 文件，它的内容如下：&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;json&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;{
-  &amp;quot;version&amp;quot;: &amp;quot;2.0.0&amp;quot;,
-  &amp;quot;tasks&amp;quot;: [
-    {
-      &amp;quot;type&amp;quot;: &amp;quot;shell&amp;quot;,
-      &amp;quot;label&amp;quot;: &amp;quot;g++ build active file&amp;quot;,
-      &amp;quot;command&amp;quot;: &amp;quot;&amp;#x2F;usr&amp;#x2F;bin&amp;#x2F;g++&amp;quot;,
-      &amp;quot;args&amp;quot;: [&amp;quot;-g&amp;quot;, &amp;quot;${file}&amp;quot;, &amp;quot;-o&amp;quot;, &amp;quot;${fileDirname}&amp;#x2F;${fileBasenameNoExtension}&amp;quot;],
-      &amp;quot;options&amp;quot;: {
-        &amp;quot;cwd&amp;quot;: &amp;quot;&amp;#x2F;usr&amp;#x2F;bin&amp;quot;
-      },
-      &amp;quot;problemMatcher&amp;quot;: [&amp;quot;$gcc&amp;quot;],
-      &amp;quot;group&amp;quot;: {
-        &amp;quot;kind&amp;quot;: &amp;quot;build&amp;quot;,
-        &amp;quot;isDefault&amp;quot;: true
-      }
-    }
-  ]
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;json&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;version&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;2.0.0&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;tasks&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: [
+&lt;&#x2F;span&gt;&lt;span&gt;    {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;type&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;shell&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;label&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;g++ build active file&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;command&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;&#x2F;usr&#x2F;bin&#x2F;g++&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;args&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;-g&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;${file}&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;-o&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;${fileDirname}&#x2F;${fileBasenameNoExtension}&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;],
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;options&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;cwd&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;&#x2F;usr&#x2F;bin&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;      },
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;problemMatcher&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;$gcc&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;],
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;group&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;kind&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;build&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;isDefault&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c18401;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  ]
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;yun-xing-bian-yi-ren-wu&quot;&gt;运行编译任务&lt;&#x2F;h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -173,33 +173,33 @@ int main()
 &lt;p&gt;下一步，你会创建一个 launch.json，用以配置 VS Code 如何调用 GDB 调试器来调试程序。选择 &lt;strong&gt;Debug &amp;gt; Add Configuration...&lt;&#x2F;strong&gt; 然后选择 &lt;strong&gt;C++ (GDB&#x2F;LLDB)&lt;&#x2F;strong&gt;。&lt;&#x2F;p&gt;
 &lt;p&gt;在下拉栏中选择 &lt;strong&gt;g++ build and debug active file&lt;&#x2F;strong&gt;。&lt;&#x2F;p&gt;
 &lt;p&gt;VS Code 会创建一个 launch.json 文件，内容如下：&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;json&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;{
-  &amp;quot;version&amp;quot;: &amp;quot;0.2.0&amp;quot;,
-  &amp;quot;configurations&amp;quot;: [
-    {
-      &amp;quot;name&amp;quot;: &amp;quot;g++ build and debug active file&amp;quot;,
-      &amp;quot;type&amp;quot;: &amp;quot;cppdbg&amp;quot;,
-      &amp;quot;request&amp;quot;: &amp;quot;launch&amp;quot;,
-      &amp;quot;program&amp;quot;: &amp;quot;${fileDirname}&amp;#x2F;${fileBasenameNoExtension}&amp;quot;,
-      &amp;quot;args&amp;quot;: [],
-      &amp;quot;stopAtEntry&amp;quot;: false,
-      &amp;quot;cwd&amp;quot;: &amp;quot;${workspaceFolder}&amp;quot;,
-      &amp;quot;environment&amp;quot;: [],
-      &amp;quot;externalConsole&amp;quot;: false,
-      &amp;quot;MIMode&amp;quot;: &amp;quot;gdb&amp;quot;,
-      &amp;quot;setupCommands&amp;quot;: [
-        {
-          &amp;quot;description&amp;quot;: &amp;quot;Enable pretty-printing for gdb&amp;quot;,
-          &amp;quot;text&amp;quot;: &amp;quot;-enable-pretty-printing&amp;quot;,
-          &amp;quot;ignoreFailures&amp;quot;: true
-        }
-      ],
-      &amp;quot;preLaunchTask&amp;quot;: &amp;quot;g++ build active file&amp;quot;,
-      &amp;quot;miDebuggerPath&amp;quot;: &amp;quot;&amp;#x2F;usr&amp;#x2F;bin&amp;#x2F;gdb&amp;quot;
-    }
-  ]
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;json&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;version&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;0.2.0&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;configurations&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: [
+&lt;&#x2F;span&gt;&lt;span&gt;    {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;name&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;g++ build and debug active file&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;type&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;cppdbg&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;request&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;launch&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;program&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;${fileDirname}&#x2F;${fileBasenameNoExtension}&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;args&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: [],
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;stopAtEntry&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c18401;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;cwd&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;${workspaceFolder}&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;environment&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: [],
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;externalConsole&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c18401;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;MIMode&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;gdb&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;setupCommands&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: [
+&lt;&#x2F;span&gt;&lt;span&gt;        {
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;description&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;Enable pretty-printing for gdb&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;text&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;-enable-pretty-printing&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;ignoreFailures&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c18401;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;      ],
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;preLaunchTask&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;g++ build active file&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;miDebuggerPath&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;&#x2F;usr&#x2F;bin&#x2F;gdb&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  ]
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;kai-shi-diao-shi&quot;&gt;开始调试&lt;&#x2F;h2&gt;
 &lt;ol&gt;
 &lt;li&gt;回到 helloworld.cpp 文件&lt;&#x2F;li&gt;
@@ -216,7 +216,7 @@ int main()
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;img src=&quot;.&#x2F;vscode-wsl-cpp-10.png&quot; alt=&quot;debug-control&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;guan-bi&quot;&gt;关闭&lt;&#x2F;h1&gt;
-&lt;p&gt;当您在 WSL 中完成工作后，可以使用 &lt;strong&gt;File&lt;&#x2F;strong&gt; 菜单中的 &lt;strong&gt;Close Remote Connection&lt;&#x2F;strong&gt; 命令和快捷键（Ctrl+Shift+P）关闭远程会话。 这将重新启动本地运行的 VS Code。您可以在 &lt;strong&gt;File&lt;&#x2F;strong&gt; &amp;gt; &lt;strong&gt;Open Recent&lt;&#x2F;strong&gt; 中选择带有 &lt;strong&gt;[WSL]&lt;&#x2F;strong&gt; 后缀的文件夹来重新打开 WSL 会话。&lt;&#x2F;p&gt;
+&lt;p&gt;当您在 WSL 中完成工作后，可以使用 &lt;strong&gt;File&lt;&#x2F;strong&gt; 菜单中的 &lt;strong&gt;Close Remote Connection&lt;&#x2F;strong&gt; 命令和快捷键（Ctrl+Shift+P）关闭远程会话。这将重新启动本地运行的 VS Code。您可以在 &lt;strong&gt;File&lt;&#x2F;strong&gt; &amp;gt; &lt;strong&gt;Open Recent&lt;&#x2F;strong&gt; 中选择带有 &lt;strong&gt;[WSL]&lt;&#x2F;strong&gt; 后缀的文件夹来重新打开 WSL 会话。&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
