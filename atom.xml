@@ -23,7 +23,7 @@
 &lt;li&gt;在 &#x2F;etc&#x2F;paths.d&#x2F; 下新建一个文件，这里起名 demo&lt;&#x2F;li&gt;
 &lt;li&gt;打开&lt;code&gt;demo&lt;&#x2F;code&gt;文件，写入 &#x2F;usr&#x2F;local&#x2F;sbin 这一行。&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;p&gt;这两部做完后 &#x2F;etc&#x2F;paths.d&#x2F;demo 文件看起来像这个样子：&lt;&#x2F;p&gt;
+&lt;p&gt;这两步做完后 &#x2F;etc&#x2F;paths.d&#x2F;demo 文件看起来像这个样子：&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;.&#x2F;img01.png&quot; alt=&quot;img01&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;大功告成。到这里我们成功添加了一条路径到&lt;code&gt;PATH&lt;&#x2F;code&gt;，当然，这个 demo 文件也可以有多条路径，每一行可以添加一条路径。&lt;&#x2F;p&gt;
 &lt;p&gt;重新打开终端，输入下面这条命令就可以看到当前的&lt;code&gt;PATH&lt;&#x2F;code&gt;变量内容。&lt;&#x2F;p&gt;
