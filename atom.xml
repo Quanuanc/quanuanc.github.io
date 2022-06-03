@@ -4,8 +4,33 @@
 	<link href="https://quanuanc.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://quanuanc.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-02-04T00:00:00+00:00</updated>
+	<updated>2022-06-02T00:00:00+00:00</updated>
 	<id>https://quanuanc.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>在 macOS 下设定 PATH</title>
+		<published>2022-06-02T00:00:00+00:00</published>
+		<updated>2022-06-02T00:00:00+00:00</updated>
+		<link href="https://quanuanc.github.io/macos-paths-d/" type="text/html"/>
+		<id>https://quanuanc.github.io/macos-paths-d/</id>
+		<content type="html">&lt;p&gt;通常来说，设定&lt;code&gt;PATH&lt;&#x2F;code&gt;可能不是一件简单的事情，我猜你一定使用过以下语法对&lt;code&gt;PATH&lt;&#x2F;code&gt;进行修改，例如：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;shell&quot; class=&quot;language-shell &quot;&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;export PATH=$PATH:&amp;#x2F;path&amp;#x2F;to&amp;#x2F;dir
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;这种方式依靠冒号&lt;code&gt;:&lt;&#x2F;code&gt;来分割各个路径，使得我们很难用肉眼来区分。&lt;&#x2F;p&gt;
+&lt;p&gt;在 macOS 环境下，设定&lt;code&gt;PATH&lt;&#x2F;code&gt;有比&lt;code&gt;export&lt;&#x2F;code&gt;更方便优雅的方式，那就是 &#x2F;etc&#x2F;paths.d&#x2F;。&lt;&#x2F;p&gt;
+&lt;p&gt;要添加一个路径到到&lt;code&gt;PATH&lt;&#x2F;code&gt;中，只需要在 &#x2F;etc&#x2F;paths.d&#x2F; 下新建一个文件（文件名可以随意），然后把该路径写到文件中即可。&lt;&#x2F;p&gt;
+&lt;p&gt;例如：将 &#x2F;usr&#x2F;local&#x2F;sbin 添加到&lt;code&gt;PATH&lt;&#x2F;code&gt;，只需进行以下两个步骤：&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;在 &#x2F;etc&#x2F;paths.d&#x2F; 下新建一个文件，这里起名 demo&lt;&#x2F;li&gt;
+&lt;li&gt;打开&lt;code&gt;demo&lt;&#x2F;code&gt;文件，写入 &#x2F;usr&#x2F;local&#x2F;sbin 这一行。&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;这两部做完后 &#x2F;etc&#x2F;paths.d&#x2F;demo 文件看起来像这个样子：&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;.&#x2F;img01.png&quot; alt=&quot;img01&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;大功告成。到这里我们成功添加了一条路径到&lt;code&gt;PATH&lt;&#x2F;code&gt;，当然，这个 demo 文件也可以有多条路径，每一行可以添加一条路径。&lt;&#x2F;p&gt;
+&lt;p&gt;重新打开终端，输入下面这条命令就可以看到当前的&lt;code&gt;PATH&lt;&#x2F;code&gt;变量内容。&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;shell&quot; class=&quot;language-shell &quot;&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;sed &amp;#x27;s&amp;#x2F;:&amp;#x2F;\n&amp;#x2F;g&amp;#x27; &amp;lt;&amp;lt;&amp;lt; &amp;quot;$PATH&amp;quot;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>[转载] 一个逢人必问: &quot;可以借我 10 块钱吗?&quot; 的土狗.....</title>
 		<published>2021-02-04T00:00:00+00:00</published>
